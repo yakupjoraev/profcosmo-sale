@@ -377,6 +377,16 @@
   }
 }
 
+.js-marquee {
+  display: flex;
+  align-items: center;
+  column-gap: 80px;
+
+  @media (max-width: $breakpoint768) {
+    column-gap: 40px;
+  }
+}
+
 // @keyframes marquee-orange {
 //   0% {
 //     transform: rotate(8deg) translateX(-120px);

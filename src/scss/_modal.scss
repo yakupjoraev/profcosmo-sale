@@ -16,14 +16,15 @@
 
 .modal.show {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   opacity: 1;
 }
 
 .modal-content {
   background-color: white;
-  margin: auto;
+  margin: 5% auto;
   padding: 100px 48px 48px;
   width: 80%;
   max-width: 540px;

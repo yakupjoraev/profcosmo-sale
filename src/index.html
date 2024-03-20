@@ -20,18 +20,22 @@
   <main class="main">
     <div class="hero">
       <div class="hero__words">
-        <div class="hero__word hero__word--orange"><span>выбери и забери </span> <span>выбери и забери </span>
-          <span>выбери и забери
-          </span> <span>выбери и забери </span><span>выбери и забери </span> <span>выбери и забери </span>
-          <span>выбери и забери
-          </span> <span>выбери и забери </span>
+        <div class="hero__word hero__word--orange" id="marquee-1">
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
         </div>
 
-        <div class="hero__word hero__word--black"><span>выбери и забери </span> <span>выбери и забери </span>
-          <span>выбери и забери
-          </span> <span>выбери и забери </span><span>выбери и забери </span> <span>выбери и забери </span>
-          <span>выбери и забери
-          </span> <span>выбери и забери </span>
+        <div class="hero__word hero__word--black" id="marquee-2">
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
+          <span>выбери и забери </span>
         </div>
       </div>
       <h1 class="title">ПОЛУЧИ ПОДАРОК ЗА ВИЗИТ</h1>
@@ -231,7 +235,30 @@
   </div>
 </body>
 
+<script type="module">
+  const screenWidth = window.innerWidth; // Получаем ширину экрана
+
+  import marquee from 'https://cdn.jsdelivr.net/npm/vanilla-marquee/dist/vanilla-marquee.js';
+  new marquee(document.getElementById('marquee-1'), {
+    duplicated: true,
+    gap: screenWidth < 767 ? 40 : 80, // Изменяем gap в зависимости от ширины экрана
+    speed: screenWidth < 767 ? 80 : 200, // Изменяем speed в зависимости от ширины экрана
+    direction: 'right',
+    delayBeforeStart: -20000
+  });
+
+  new marquee(document.getElementById('marquee-2'), {
+    duplicated: true,
+    gap: screenWidth < 767 ? 40 : 80, // Изменяем gap в зависимости от ширины экрана
+    speed: screenWidth < 767 ? 80 : 200, // Изменяем speed в зависимости от ширины экрана
+    direction: 'right',
+    delayBeforeStart: -20000
+  });
+</script>
+
+
 <script src="./js/swiper-bundle.min.js"></script>
+<!-- <script src="./js/vanilla-marquee.js"></script> -->
 <script src="./js/scripts.min.js"></script>
 
 </html>

@@ -3,6 +3,7 @@ function slider() {
   var swiper = new Swiper(".slider", {
     slidesPerView: 'auto',
     centeredSlides: true,
+    loop: true,
     // spaceBetween: 40,
     pagination: {
       el: ".slider__pagination",
@@ -40,3 +41,5 @@ window.addEventListener('click', (event) => {
     event.target.classList.remove('show');
   }
 });
+
+
